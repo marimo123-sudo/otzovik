@@ -1,0 +1,20 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+
+.back {
+    .back {
+        position: relative;
+        width: 100vw;
+        height: var(--viewport-height);
+        background: #ff0000;
+      }
+}
+
+.hello {
+    position: relative;
+    height: calc(var(--viewport-height) * 0.5);
+    
+}
