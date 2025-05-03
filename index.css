@@ -1,19 +1,19 @@
-html, body {
+head, body {
     margin: 0;
     padding: 0;
 }
 
 
 .back {
-    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     width: 100vw;
     height: var(--viewport-height);
     background: #ff0000;
     }
 
-    
+
 .hello {
-    position: relative;
     height: calc(var(--viewport-height) * 0.5);
-    
 }
