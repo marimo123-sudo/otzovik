@@ -3,10 +3,99 @@ head, body {
     padding: 0;
 }
 
+body {
+    user-select: none;       /* Стандартное свойство */
+    -webkit-user-select: none; /* Chrome, Safari */
+    -moz-user-select: none;    /* Firefox */
+    -ms-user-select: none;     /* IE/Edge */
+}
+
 .back {
     height: var(--vh);
     width: 100vw;
     background-color: #000000;
+}
+
+.all_product {
+    height: calc(var(--vh) * 0.65);
+    width: 90vw;
+    position: absolute;
+    top: calc(var(--vh) * 0.24);
+    left: 5vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.create_product {
+    visibility: hidden;
+    position: relative;
+    height: calc(var(--vh) * 0.08);
+    width: 60vw;
+    border: 2px solid rgba(255, 255, 255, 0.2);
+    background-color: #000000;
+    border-radius: 4vw;
+    transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+    cursor: pointer;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.create_product::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.1), transparent);
+    transition: 0.5s;
+}
+
+.create_product:hover {
+    background-color: rgb(20, 20, 20);
+    border-color: rgba(255, 255, 255, 0.4);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+}
+
+.create_product:hover::before {
+    left: 100%;
+}
+
+.create_product:active {
+    transform: translateY(2px);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.4);
+}
+
+.create_product_text {
+    color: white;
+    font-family: 'Inter', sans-serif;
+    font-weight: 500;
+    font-size: clamp(14px, 2vw, 18px);
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+    transition: transform 0.3s;
+}
+
+.create_product {
+    -webkit-tap-highlight-color: transparent; /* Для Safari/iOS */
+    outline: none; /* Убирает outline при фокусе */
+}
+
+/* Для уверенности можно добавить */
+.create_product:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+.create_product:hover .create_product_text {
+    transform: scale(1.02);
 }
 
 .profile_container {
@@ -24,4 +113,39 @@ head, body {
     position: absolute;
     bottom: 0;
     background-color: aliceblue;
+}
+
+.list_of_product {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    overflow-y: auto;
+}
+
+.item {
+    position: relative;
+    width: 100%;
+    height: calc(var(--vh) * 0.13);
+    background-color: rgb(108, 155, 197);
+    margin-bottom: calc(var(--vh) * 0.02);
+}
+
+.product_avatar {
+    position: absolute;
+    height: 80%;
+    border-radius: 100%;
+    left: 2vw;
+    top: 2vw;
+}
+
+.product_name {
+    position: absolute;
+    color: aliceblue;
+    font-family: sans-serif;
+    left: 22vw;
+    top: 2vw;
+    width: 65vw;
+    white-space: nowrap;      /* не переносить текст */
+    overflow: hidden;         /* скрыть лишний текст */
+    text-overflow: ellipsis;  /* показать "..." */
 }
