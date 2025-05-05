@@ -1,0 +1,27 @@
+head, body {
+    margin: 0;
+    padding: 0;
+}
+
+.back {
+    height: var(--vh);
+    width: 100vw;
+    background-color: #000000;
+}
+
+.profile_container {
+    height: calc(var(--vh) * 0.2);
+    background-color: rgb(32, 32, 32);
+    width: 90vw;
+    position: absolute;
+    left: 5vw;
+    top: calc(var(--vh) * 0.02);
+}
+
+.profile_underline {
+    height: 1px;
+    width: 90vw;
+    position: absolute;
+    bottom: 0;
+    background-color: aliceblue;
+}
