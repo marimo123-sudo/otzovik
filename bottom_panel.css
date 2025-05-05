@@ -1,0 +1,44 @@
+.bottom-panel {
+    position: absolute;
+    top: calc(var(--vh) * 0.9);
+    width: 100vw;
+    align-items: start;
+    justify-content: center;
+    display: flex;
+    height: calc(var(--vh) * 0.1);
+}
+
+.line {
+    position: absolute;
+    width: 90vw;
+    height: 1px;
+    background-color: beige;
+}
+
+.conteiner_for_btns {
+    width: 95vw;
+    justify-content: center;
+    align-items: center;
+    display: flex;
+}
+
+.btm_btn {
+    width: 50%;
+    border-color: transparent;
+    height: calc(var(--vh) * 0.09);
+    background-color: transparent;
+}
+
+.search_img, .profile_img {
+    height: calc(var(--vh) * 0.04);
+}
+
+
+.text_tip {
+    color: #959595;
+    font-size: 5vw;
+}
+
+.text_tip.active {
+    color: #fff;
+}
